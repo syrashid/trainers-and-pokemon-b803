@@ -59,5 +59,10 @@ Pokemon.create!(
 )
 puts "Created #{Pokemon.count} Pokemon 🐢"
 
+Move.destroy_all
+names = %w(Water\ Gun ThunderBolt Ember Dig Tackle Body\ Slam)
+names.each do |name|
+  Move.create(name: name)
+end
 
 puts "Finished Seeding 🌱"

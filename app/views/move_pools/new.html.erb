@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h1>Add a move for <%= @pokemon.name %></h1>
+      <%= simple_form_for [@pokemon, @move_pool] do |f| %>
+        <%= f.association :move, collection: Move.all, input_html: {class: "multiple-select", multiple: true, data: { controller: 'select2' }}, include_hidden: false %>
+        <%= f.button :submit, class: 'btn btn-success w-100' %>
+      <% end %>
+    </div>
+  </div>
+</div>
