@@ -4,3 +4,8 @@ Rails.application.routes.draw do
   end
   resources :pokemons, only: :destroy
 end
+
+# Generate a moves table X
+# Generate a join table
+# Associations and validations
+# Crash test
